@@ -19,7 +19,7 @@ const UserForm = () => {
     //get the inputs from inputs
     const user = { name, title };
 
-    const response = await fetch("/api/sectors", {
+    const response = await fetch("https://userinfo-api.onrender.com", {
       method: "POST",
       body: JSON.stringify(user),
       headers: {

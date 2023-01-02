@@ -49,13 +49,24 @@ const Edituser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("/api/sectors/" + seletedUser._id, {
-      method: "PATCH",
-      body: JSON.stringify(seletedUser),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    // const response = await fetch("/api/sectors/" + seletedUser._id, {
+    //   method: "PATCH",
+    //   body: JSON.stringify(seletedUser),
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // });
+
+    const response = await fetch(
+      "https://userinfo-api.onrender.com/" + seletedUser._id,
+      {
+        method: "PATCH",
+        body: JSON.stringify(seletedUser),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
 
     const json = await response.json();
     console.log(json);

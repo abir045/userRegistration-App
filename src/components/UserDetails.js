@@ -12,9 +12,16 @@ const UserDetails = ({ user }) => {
   const { dispatch } = useUserContext();
 
   const handleDelete = async () => {
-    const response = await fetch("/api/sectors/" + user._id, {
-      method: "DELETE",
-    });
+    // const response = await fetch("/api/sectors/" + user._id, {
+    //   method: "DELETE",
+    // });
+
+    const response = await fetch(
+      "https://userinfo-api.onrender.com/" + user._id,
+      {
+        method: "DELETE",
+      }
+    );
     const json = await response.json();
 
     // dispatching delete_user action to reducer to get the payload of user id from async handleclick function
