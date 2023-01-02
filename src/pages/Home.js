@@ -9,7 +9,9 @@ export const Home = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       // const response = await fetch("/api/sectors");
-      const response = await fetch("https://userinfo-api.onrender.com");
+      const response = await fetch(
+        "https://userinfo-api.onrender.com/api/sectors"
+      );
       const json = await response.json();
 
       if (response.ok) {

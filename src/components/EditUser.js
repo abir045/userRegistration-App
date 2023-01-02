@@ -58,7 +58,7 @@ const Edituser = () => {
     // });
 
     const response = await fetch(
-      "https://userinfo-api.onrender.com/" + seletedUser._id,
+      "https://userinfo-api.onrender.com/api/sectors/" + seletedUser._id,
       {
         method: "PATCH",
         body: JSON.stringify(seletedUser),

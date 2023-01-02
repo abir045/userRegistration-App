@@ -17,7 +17,7 @@ const UserDetails = ({ user }) => {
     // });
 
     const response = await fetch(
-      "https://userinfo-api.onrender.com/" + user._id,
+      "https://userinfo-api.onrender.com/api/sectors/" + user._id,
       {
         method: "DELETE",
       }
